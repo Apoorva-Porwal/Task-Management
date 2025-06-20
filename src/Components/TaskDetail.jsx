@@ -5,7 +5,7 @@ const TaskDetail = () => {
   const { id } = useParams();
   const [task, setTask] = useState(null);
 
-  const handleDelete = () => {
+  const handleDelete = () => {  
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   const updated = tasks.filter(t => t.id !== id);
   localStorage.setItem('tasks', JSON.stringify(updated));
